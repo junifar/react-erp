@@ -1,7 +1,14 @@
 import React, {Component} from 'react'
 
 class MainSidebar extends Component{
+
     render(){
+
+        function testClick(e){
+            e.preventDefault();
+            alert("Clicked");
+        }
+
         return(
             <aside className="main-sidebar">
                 <section className="sidebar">
@@ -41,6 +48,7 @@ class MainSidebar extends Component{
                                         <i className="fa fa-circle-o"></i> Dashboard</a>
                                 </li>
                                 <li><a href="index2.html"><i className="fa fa-circle-o"></i> Dashboard v2</a></li>
+                                <li><a href="#" onClick={testClick}><i className="fa fa-circle-o"></i> Test</a></li>
                             </ul>
                         </li>
                     </ul>
